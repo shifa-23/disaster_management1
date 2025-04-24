@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landslide Preparedness | Guardian Shield</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Landslide-specific styles */
+        .landslide-hero {
+            background: linear-gradient(rgba(93, 64, 55, 0.8), rgba(141, 110, 99, 0.6)), 
+                        url('https://images.unsplash.com/photo-1605540436563-5bca919ae766?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80') no-repeat center center/cover;
+        }
+        
+        .landslide-prep {
+            background: linear-gradient(135deg, #5D4037 0%, #8D6E63 100%);
+        }
+        
+        .landslide-cta {
+            background: linear-gradient(135deg, #8D6E63 0%, #BCAAA4 100%);
+        }
+        
+        .fact-card {
+            border-top-color: #8D6E63;
+        }
+        
+        .fact-icon {
+            color: #8D6E63;
+        }
+        
+        .event-table th {
+            background-color: #8D6E63;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="nav-header_nw">
+        <div class="logo-container_nw">
+            <img class="logo-img_nw" src="https://img.icons8.com/color/96/000000/shield.png" alt="Guardian Shield Logo">
+            <h1 class="logo-text_nw">Guardian Shield</h1>
+        </div>
+        <nav class="main-nav_nw" id="mainNav_nw">
+            <ul class="nav-list_nw">
+                <li class="nav-item_nw"><a href="home.html" class="nav-link_nw" data-page="home">Home</a></li>
+                <li class="nav-item_nw"><a href="earthquake.html" class="nav-link_nw" data-page="earthquake">Earthquake</a></li>
+                <li class="nav-item_nw"><a href="flood.html" class="nav-link_nw" data-page="flood">Flood</a></li>
+                <li class="nav-item_nw"><a href="landslide.html" class="nav-link_nw" data-page="landslide">Landslide</a></li>
+                <li class="nav-item_nw"><a href="disease.html" class="nav-link_nw" data-page="disease">Viral Disease</a></li>
+            </ul>
+        </nav>
+        <button class="nav-button_nw mobile-cta_nw">Emergency Guide</button>
+        <button class="mobile-menu_nw" id="mobileMenu_nw">
+            <i class="fas fa-bars"></i>
+        </button>
+    </header>
+
+
+    <!-- Hero Section -->
+    <section class="disaster-hero landslide-hero">
+        <div class="hero-content">
+            <h2 class="animate">Landslide Preparedness & Response</h2>
+            <p class="animate delay-1">Learn how to recognize warning signs and protect yourself from landslides and debris flows.</p>
+            <div class="hero-buttons animate delay-2">
+                <button class="cta-button">Download Safety Checklist</button>
+                <button class="secondary-button">Risk Assessment</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Landslide Facts Section -->
+    <section class="disaster-section" id="facts">
+        <div class="section-title">
+            <h2>Understanding Landslides</h2>
+            <p>Essential facts about landslides to help you better prepare and respond</p>
+        </div>
+        <div class="facts-grid">
+            <div class="fact-card animate">
+                <div class="fact-icon">
+                    <i class="fas fa-mountain"></i>
+                </div>
+                <h3>Speed Variability</h3>
+                <p>Landslides can move at speeds from mere millimeters per year to 200+ mph for debris flows - faster than a sprinting human.</p>
+            </div>
+            <div class="fact-card animate delay-1">
+                <div class="fact-icon">
+                    <i class="fas fa-tree"></i>
+                </div>
+                <h3>Warning Signs</h3>
+                <p>New cracks in ground/structures, tilted trees, sudden water flow changes, and faint rumbling sounds often precede landslides.</p>
+            </div>
+            <div class="fact-card animate delay-2">
+                <div class="fact-icon">
+                    <i class="fas fa-cloud-rain"></i>
+                </div>
+                <h3>Rainfall Trigger</h3>
+                <p>Just 3 days of steady rain can trigger landslides, with most occurring during intense rainfall or rapid snowmelt periods.</p>
+            </div>
+            <div class="fact-card animate delay-3">
+                <div class="fact-icon">
+                    <i class="fas fa-globe-americas"></i>
+                </div>
+                <h3>Global Impact</h3>
+                <p>Landslides cause $3.5B in damage and 25-50 deaths annually in the U.S. alone, with higher impacts in mountainous regions.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Preparedness Guide -->
+    <section class="preparedness-guide landslide-prep" id="preparedness">
+        <div class="guide-container">
+            <div class="section-title">
+                <h2>Landslide Preparedness Guide</h2>
+                <p>Follow these steps to ensure you're ready before, during, and after a landslide</p>
+            </div>
+            <div class="guide-steps">
+                <div class="guide-step animate">
+                    <div class="step-number">1</div>
+                    <h3>Before a Landslide</h3>
+                    <ul>
+                        <li>Learn your area's landslide risk history</li>
+                        <li>Consult a professional for retrofitting</li>
+                        <li>Plant ground cover on slopes</li>
+                        <li>Install flexible pipe fittings</li>
+                        <li>Create an evacuation plan with routes</li>
+                    </ul>
+                </div>
+                <div class="guide-step animate delay-1">
+                    <div class="step-number">2</div>
+                    <h3>During a Landslide</h3>
+                    <ul>
+                        <li>Evacuate immediately if warned</li>
+                        <li>Move to higher ground if possible</li>
+                        <li>Avoid river valleys and low areas</li>
+                        <li>Listen for unusual sounds</li>
+                        <li>Stay away from slide path</li>
+                    </ul>
+                </div>
+                <div class="guide-step animate delay-2">
+                    <div class="step-number">3</div>
+                    <h3>After a Landslide</h3>
+                    <ul>
+                        <li>Stay away from slide area</li>
+                        <li>Check for injured/trapped persons</li>
+                        <li>Listen for emergency information</li>
+                        <li>Watch for flooding</li>
+                        <li>Report broken utilities</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recent Landslides -->
+    <section class="recent-events" id="recent">
+        <div class="section-title">
+            <h2>Recent Major Landslide Events</h2>
+            <p>Global landslide activity in the past 12 months</p>
+        </div>
+        <table class="event-table">
+            <thead>
+                <tr>
+                    <th>Location</th>
+                    <th>Severity</th>
+                    <th>Trigger</th>
+                    <th>Date</th>
+                    <th>Casualties</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Atami, Japan</td>
+                    <td><span class="severity-badge severity-high">Severe</span></td>
+                    <td>Heavy Rainfall</td>
+                    <td>2023-07-03</td>
+                    <td>27</td>
+                </tr>
+                <tr>
+                    <td>Petropolis, Brazil</td>
+                    <td><span class="severity-badge severity-high">Severe</span></td>
+                    <td>Torrential Rains</td>
+                    <td>2023-02-15</td>
+                    <td>231</td>
+                </tr>
+                <tr>
+                    <td>Chittagong, Bangladesh</td>
+                    <td><span class="severity-badge severity-medium">Moderate</span></td>
+                    <td>Monsoon Rains</td>
+                    <td>2023-06-11</td>
+                    <td>15</td>
+                </tr>
+                <tr>
+                    <td>Alaska, USA</td>
+                    <td><span class="severity-badge severity-low">Minor</span></td>
+                    <td>Glacial Retreat</td>
+                    <td>2023-05-28</td>
+                    <td>0</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="disaster-cta landslide-cta">
+        <h2>Get Personalized Landslide Preparedness Plan</h2>
+        <p>Our system analyzes your location and terrain to create a customized landslide safety strategy</p>
+        <button class="cta-button">Generate Your Plan</button>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3>Guardian Shield</h3>
+                <p>Advanced disaster management technology saving lives through prediction, prevention, and rapid response.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h3>Landslide Resources</h3>
+                <ul>
+                    <li><a href="#">Safety Checklists</a></li>
+                    <li><a href="#">Slope Stabilization</a></li>
+                    <li><a href="#">Emergency Kits</a></li>
+                    <li><a href="#">Evacuation Plans</a></li>
+                    <li><a href="#">Risk Maps</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Global Networks</h3>
+                <ul>
+                    <li><a href="#">USGS Landslide Hazards</a></li>
+                    <li><a href="#">Global Landslide Catalog</a></li>
+                    <li><a href="#">International Consortium on Landslides</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Company</h3>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Leadership</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Press</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 Guardian Shield Technologies. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+        </div>
+    </footer>
+
+    <!-- Language Selector -->
+    <div class="language-selector">
+        <div class="language-button" id="languageButton">
+            <i class="fas fa-language"></i>
+        </div>
+        <div class="language-dropdown" id="languageDropdown">
+            <a href="#" onclick="changeLanguage('en')">English</a>
+            <a href="#" onclick="changeLanguage('es')">Español</a>
+            <a href="#" onclick="changeLanguage('fr')">Français</a>
+            <a href="#" onclick="changeLanguage('de')">Deutsch</a>
+            <a href="#" onclick="changeLanguage('zh')">中文</a>
+            <a href="#" onclick="changeLanguage('ja')">日本語</a>
+            <a href="#" onclick="changeLanguage('ar')">العربية</a>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
