@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Earthquake Preparedness | Guardian Shield</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        :root {
+            --eq-primary: #FF6B6B;
+            --eq-secondary: #FF9F1C;
+            --eq-dark: #292F36;
+            --eq-light: #F7FFF7;
+        }
+        
+        /* Earthquake Hero Section */
+        .eq-hero {
+            height: 100vh;
+            background: linear-gradient(rgba(41, 47, 54, 0.8), rgba(255, 107, 107, 0.6)), 
+                        url('https://images.unsplash.com/photo-1542273917363-3b1817f1a2ec?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80') no-repeat center center/cover;
+            color: white;
+            display: flex;
+            align-items: center;
+            padding: 0 5%;
+            padding-top: 80px;
+            position: relative;
+        }
+        
+        /* Earthquake Facts Section */
+        .eq-facts .fact-card {
+            border-top: 5px solid var(--eq-primary);
+        }
+        
+        .eq-facts .fact-icon {
+            color: var(--eq-primary);
+        }
+        
+        /* Preparedness Guide */
+        .eq-prep {
+            background: linear-gradient(135deg, var(--eq-primary) 0%, var(--eq-secondary) 100%);
+        }
+        
+        /* Simulation Section */
+        .eq-simulation {
+            background-color: var(--eq-light);
+        }
+        
+        .magnitude-option.active {
+            background-color: var(--eq-primary);
+        }
+        
+        /* Recent Earthquakes */
+        .eq-recent {
+            background-color: var(--eq-dark);
+        }
+        
+        /* CTA Section */
+        .eq-cta {
+            background: linear-gradient(135deg, var(--eq-primary) 0%, var(--eq-secondary) 100%);
+        }
+    </style>
+</head>
+<body id="earthquake-page">
+    <!-- Navigation -->
+    <header class="nav-header_nw">
+        <div class="logo-container_nw">
+            <img class="logo-img_nw" src="https://img.icons8.com/color/96/000000/shield.png" alt="Guardian Shield Logo">
+            <h1 class="logo-text_nw">Guardian Shield</h1>
+        </div>
+        <nav class="main-nav_nw" id="mainNav_nw">
+            <ul class="nav-list_nw">
+                <li class="nav-item_nw"><a href="home.html" class="nav-link_nw" data-page="home">Home</a></li>
+                <li class="nav-item_nw"><a href="earthquake.html" class="nav-link_nw" data-page="earthquake">Earthquake</a></li>
+                <li class="nav-item_nw"><a href="flood.html" class="nav-link_nw" data-page="flood">Flood</a></li>
+                <li class="nav-item_nw"><a href="landslide.html" class="nav-link_nw" data-page="landslide">Landslide</a></li>
+                <li class="nav-item_nw"><a href="disease.html" class="nav-link_nw" data-page="disease">Viral Disease</a></li>
+            </ul>
+        </nav>
+        <button class="nav-button_nw mobile-cta_nw">Emergency Guide</button>
+        <button class="mobile-menu_nw" id="mobileMenu_nw">
+            <i class="fas fa-bars"></i>
+        </button>
+    </header>
+    <!-- Hero Section -->
+    <section class="eq-hero">
+        <div class="hero-content">
+            <h2 class="animate">Earthquake Preparedness & Response</h2>
+            <p class="animate delay-1">Learn how to protect yourself before, during, and after seismic events with our comprehensive earthquake safety resources.</p>
+            <div class="hero-buttons animate delay-2">
+                <button class="cta-button">Download Safety Checklist</button>
+                <button class="secondary-button">Live Seismic Map</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Earthquake Facts -->
+    <section class="disaster-section eq-facts">
+        <div class="section-title">
+            <h2>Understanding Earthquakes</h2>
+            <p>Essential facts about seismic activity to help you better prepare</p>
+        </div>
+        <div class="facts-grid">
+            <div class="fact-card animate">
+                <div class="fact-icon">
+                    <i class="fas fa-layer-group"></i>
+                </div>
+                <h3>Tectonic Plates</h3>
+                <p>Earth's crust consists of 15-20 major plates that move constantly, causing 80% of large earthquakes along their boundaries.</p>
+            </div>
+            <div class="fact-card animate delay-1">
+                <div class="fact-icon">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                <h3>Richter Scale</h3>
+                <p>Each whole number increase means 10x greater amplitude and ~32x more energy release. A 6.0 is 100x stronger than a 4.0.</p>
+            </div>
+            <div class="fact-card animate delay-2">
+                <div class="fact-icon">
+                    <i class="fas fa-globe-americas"></i>
+                </div>
+                <h3>Global Activity</h3>
+                <p>About 500,000 detectable earthquakes occur annually, with 100 causing damage and one great quake (8.0+) each year on average.</p>
+            </div>
+            <div class="fact-card animate delay-3">
+                <div class="fact-icon">
+                    <i class="fas fa-clock"></i>
+                </div>
+                <h3>Aftershocks</h3>
+                <p>Can continue for weeks, months, or even years after the main shock, decreasing in frequency but potentially still dangerous.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Preparedness Guide -->
+    <section class="preparedness-guide eq-prep">
+        <div class="guide-container">
+            <div class="section-title">
+                <h2>Earthquake Preparedness Guide</h2>
+                <p>Follow these steps to ensure you're ready before, during, and after an earthquake</p>
+            </div>
+            <div class="guide-steps">
+                <div class="guide-step animate">
+                    <div class="step-number">1</div>
+                    <h3>Before an Earthquake</h3>
+                    <ul>
+                        <li>Secure heavy furniture to walls</li>
+                        <li>Create an emergency kit (food, water, meds)</li>
+                        <li>Identify safe spots in each room</li>
+                        <li>Practice "Drop, Cover, Hold On" drills</li>
+                        <li>Learn how to shut off utilities</li>
+                    </ul>
+                </div>
+                <div class="guide-step animate delay-1">
+                    <div class="step-number">2</div>
+                    <h3>During an Earthquake</h3>
+                    <ul>
+                        <li>Drop to hands and knees</li>
+                        <li>Cover head and neck under sturdy furniture</li>
+                        <li>Hold on until shaking stops</li>
+                        <li>Stay indoors if inside, outdoors if outside</li>
+                        <li>Avoid doorways and windows</li>
+                    </ul>
+                </div>
+                <div class="guide-step animate delay-2">
+                    <div class="step-number">3</div>
+                    <h3>After an Earthquake</h3>
+                    <ul>
+                        <li>Expect aftershocks</li>
+                        <li>Check for injuries and hazards</li>
+                        <li>Listen to emergency broadcasts</li>
+                        <li>Use text messages instead of calls</li>
+                        <li>Inspect utilities for damage</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Simulation -->
+    <section class="disaster-section eq-simulation">
+        <div class="section-title">
+            <h2>Earthquake Magnitude Simulator</h2>
+            <p>See how different magnitude earthquakes affect structures</p>
+        </div>
+        <div class="simulation-container">
+            <div class="magnitude-selector">
+                <div class="magnitude-option active" data-magnitude="4">4.0 - Light</div>
+                <div class="magnitude-option" data-magnitude="5">5.0 - Moderate</div>
+                <div class="magnitude-option" data-magnitude="6">6.0 - Strong</div>
+                <div class="magnitude-option" data-magnitude="7">7.0 - Major</div>
+                <div class="magnitude-option" data-magnitude="8">8.0 - Great</div>
+            </div>
+            <div class="simulation-visual" id="eqSimulation">
+                <div class="building" id="building1"></div>
+                <div class="building" id="building2"></div>
+                <div class="building" id="building3"></div>
+            </div>
+            <button class="cta-button" id="simulateBtn">Simulate Earthquake</button>
+            <div class="simulation-result" id="eqResult">
+                <h3>Effects of a <span id="resultMagnitude">5.0</span> Magnitude Earthquake</h3>
+                <p><strong>Human Perception:</strong> <span id="humanPerception">Felt by nearly everyone; many awakened. Some dishes, windows broken.</span></p>
+                <p><strong>Potential Damage:</strong> <span id="potentialDamage">Damage negligible in buildings of good design and construction; slight to moderate in well-built ordinary structures.</span></p>
+                <p><strong>Radius of Impact:</strong> <span id="radiusImpact">Can be felt over areas as large as 1,000 km across.</span></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recent Earthquakes -->
+    <section class="recent-events eq-recent">
+        <div class="section-title">
+            <h2>Recent Significant Earthquakes</h2>
+            <p>Global seismic activity in the past 30 days</p>
+        </div>
+        <table class="event-table">
+            <thead>
+                <tr>
+                    <th>Location</th>
+                    <th>Magnitude</th>
+                    <th>Depth</th>
+                    <th>Date & Time</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Antofagasta, Chile</td>
+                    <td><span class="severity-badge severity-high">6.8</span></td>
+                    <td>42.3 km</td>
+                    <td>2023-07-15 08:42 UTC</td>
+                    <td>Reviewed</td>
+                </tr>
+                <tr>
+                    <td>Fiji Islands Region</td>
+                    <td><span class="severity-badge severity-medium">5.7</span></td>
+                    <td>536.8 km</td>
+                    <td>2023-07-14 22:18 UTC</td>
+                    <td>Reviewed</td>
+                </tr>
+                <tr>
+                    <td>Hawaii, USA</td>
+                    <td><span class="severity-badge severity-low">4.3</span></td>
+                    <td>12.5 km</td>
+                    <td>2023-07-14 15:32 UTC</td>
+                    <td>Reviewed</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="disaster-cta eq-cta">
+        <h2>Get Personalized Earthquake Preparedness Plan</h2>
+        <p>Our system analyzes your location and building type to create a customized earthquake safety strategy</p>
+        <button class="cta-button">Generate Your Plan</button>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3>Guardian Shield</h3>
+                <p>Advanced disaster management technology saving lives through prediction, prevention, and rapid response.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h3>Earthquake Resources</h3>
+                <ul>
+                    <li><a href="#">Safety Checklists</a></li>
+                    <li><a href="#">Building Retrofitting</a></li>
+                    <li><a href="#">Emergency Kits</a></li>
+                    <li><a href="#">Family Plans</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Global Networks</h3>
+                <ul>
+                    <li><a href="#">USGS</a></li>
+                    <li><a href="#">EMSC</a></li>
+                    <li><a href="#">Japan Meteorological Agency</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Company</h3>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Leadership</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 Guardian Shield Technologies. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Earthquake Simulation
+        document.addEventListener('DOMContentLoaded', function() {
+            // Create building windows
+            const buildings = document.querySelectorAll('.building');
+            buildings.forEach(building => {
+                for (let i = 0; i < 5; i++) {
+                    for (let j = 0; j < 3; j++) {
+                        const window = document.createElement('div');
+                        window.className = 'window';
+                        window.style.left = `${20 + j * 30}px`;
+                        window.style.top = `${20 + i * 40}px`;
+                        building.appendChild(window);
+                    }
+                }
+            });
+
+            // Magnitude selector
+            const magnitudeOptions = document.querySelectorAll('.magnitude-option');
+            magnitudeOptions.forEach(option => {
+                option.addEventListener('click', function() {
+                    magnitudeOptions.forEach(opt => opt.classList.remove('active'));
+                    this.classList.add('active');
+                });
+            });
+
+            // Simulation button
+            document.getElementById('simulateBtn').addEventListener('click', function() {
+                const activeMagnitude = document.querySelector('.magnitude-option.active').dataset.magnitude;
+                const buildings = document.querySelectorAll('.building');
+                
+                // Update result display
+                document.getElementById('resultMagnitude').textContent = activeMagnitude;
+                
+                // Set effects based on magnitude
+                let effects = {};
+                if (activeMagnitude >= 8) {
+                    effects = {
+                        perception: "Violent shaking. Difficult to stand. Significant damage to buildings.",
+                        damage: "Severe damage to most buildings. Collapse of many structures.",
+                        radius: "Can cause damage hundreds of kilometers from epicenter."
+                    };
+                } else if (activeMagnitude >= 7) {
+                    effects = {
+                        perception: "Very strong shaking. Most people frightened and run outdoors.",
+                        damage: "Considerable damage to ordinary buildings. Some collapse.",
+                        radius: "Felt over large regions. Damage in epicentral area."
+                    };
+                } else if (activeMagnitude >= 6) {
+                    effects = {
+                        perception: "Strong shaking felt by all. Furniture moves. Some heavy objects fall.",
+                        damage: "Moderate damage to well-built structures. Heavy damage to poorly built.",
+                        radius: "Felt throughout region. Localized damage near epicenter."
+                    };
+                } else if (activeMagnitude >= 5) {
+                    effects = {
+                        perception: "Felt by nearly everyone. Some dishes broken. Windows may crack.",
+                        damage: "Slight damage to well-built structures. Moderate damage to ordinary buildings.",
+                        radius: "Felt over area about 100 km across."
+                    };
+                } else {
+                    effects = {
+                        perception: "Noticeable shaking of indoor items. Rattling noises.",
+                        damage: "None to slight damage. Some objects may fall off shelves.",
+                        radius: "Felt by most people in the affected area."
+                    };
+                }
+                
+                document.getElementById('humanPerception').textContent = effects.perception;
+                document.getElementById('potentialDamage').textContent = effects.damage;
+                document.getElementById('radiusImpact').textContent = effects.radius;
+                
+                // Animate buildings
+                buildings.forEach((building, index) => {
+                    building.style.animation = 'none';
+                    void building.offsetWidth; // Trigger reflow
+                    
+                    let intensity = 0;
+                    if (activeMagnitude >= 8) intensity = 15;
+                    else if (activeMagnitude >= 7) intensity = 10;
+                    else if (activeMagnitude >= 6) intensity = 7;
+                    else if (activeMagnitude >= 5) intensity = 4;
+                    else intensity = 2;
+                    
+                    // Different buildings shake differently
+                    const delay = index * 0.1;
+                    const duration = 2 + (index * 0.3);
+                    
+                    building.style.animation = `shake ${duration}s ease-out ${delay}s`;
+                    building.style.setProperty('--shake-intensity', `${intensity}px`);
+                });
+                
+                // Show results
+                document.getElementById('eqResult').style.display = 'block';
+            });
+        });
+
+        // Shake animation
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes shake {
+                0%, 100% { transform: translateX(0); }
+                10%, 30%, 50%, 70%, 90% { transform: translateX(calc(-1 * var(--shake-intensity))); }
+                20%, 40%, 60%, 80% { transform: translateX(var(--shake-intensity)); }
+            }
+            .building { transform-origin: bottom; }
+        `;
+        document.head.appendChild(style);
+    </script>
+</body>
+</html>
