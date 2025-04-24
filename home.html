@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guardian Shield | Advanced Disaster Management System</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <img src="https://img.icons8.com/color/96/000000/shield.png" alt="Guardian Shield Logo">
+            <h1>Guardian Shield</h1>
+        </div>
+        <nav id="mainNav">
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="earthquake.html">Earthquake</a></li>
+                <li><a href="flood.html">Flood</a></li>
+                <li><a href="landslide.html" class="active">Landslide</a></li>
+                <li><a href="disease.html">Viral Disease</a></li>
+            </ul>
+        </nav>
+        <button class="cta-button">Emergency Guide</button>
+        <div class="mobile-menu" id="mobileMenu">
+            <i class="fas fa-bars"></i>
+        </div>
+    </header>
+
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h2 class="animate">Advanced Disaster Management for a Safer Tomorrow</h2>
+            <p class="animate delay-1">Our AI-powered platform predicts, prevents, and manages disasters with unprecedented accuracy, saving lives and reducing economic impact.</p>
+            <div class="hero-buttons animate delay-2">
+                <button class="cta-button">Request Demo</button>
+                <button class="secondary-button">Learn More</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="section-title">
+            <h2>Comprehensive Disaster Solutions</h2>
+            <p>Our platform integrates cutting-edge technology with emergency response protocols to provide end-to-end disaster management</p>
+        </div>
+        <div class="features-grid">
+            <div class="feature-card animate">
+                <div class="feature-icon">
+                    <i class="fas fa-brain"></i>
+                </div>
+                <h3>AI Prediction Engine</h3>
+                <p>Our proprietary algorithms analyze historical data and real-time inputs to forecast disasters with 92% accuracy up to 72 hours in advance.</p>
+            </div>
+            <div class="feature-card animate delay-1">
+                <div class="feature-icon">
+                    <i class="fas fa-broadcast-tower"></i>
+                </div>
+                <h3>Global Alert Network</h3>
+                <p>Instant notifications through multiple channels including mobile, satellite, and IoT devices ensure no one is left uninformed.</p>
+            </div>
+            <div class="feature-card animate delay-2">
+                <div class="feature-icon">
+                    <i class="fas fa-robot"></i>
+                </div>
+                <h3>Autonomous Response Drones</h3>
+                <p>Our fleet of AI-powered drones can be deployed within minutes to assess damage, deliver supplies, and assist in search & rescue.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Disaster Predictor Section -->
+    <section class="predictor" id="predictor">
+        <h2>Disaster Risk Predictor</h2>
+        <p>Enter your location details to receive a personalized disaster risk assessment and preparedness plan</p>
+        <div class="predictor-container">
+            <div class="predictor-input">
+                <input type="text" placeholder="Enter city or coordinates" id="locationInput">
+                <select id="disasterType">
+                    <option value="">Select disaster type</option>
+                    <option value="earthquake">Earthquake</option>
+                    <option value="flood">Flood</option>
+                    <option value="hurricane">Hurricane/Cyclone</option>
+                    <option value="wildfire">Wildfire</option>
+                    <option value="tsunami">Tsunami</option>
+                </select>
+            </div>
+            <button class="cta-button" id="predictButton">Assess Risk</button>
+            <div class="predictor-result" id="predictorResult">
+                <h3>Risk Assessment for <span id="resultLocation">New York City</span></h3>
+                <p>Disaster Type: <span id="resultDisaster">Earthquake</span></p>
+                <p>Risk Level: <span id="riskLevel" class="risk-high">High</span></p>
+                <p>Probability: <span id="probability">68%</span> in next 30 days</p>
+                <p>Recommended Actions: <span id="recommendations">Evacuation plan review, emergency kit preparation, structural reinforcement recommended.</span></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Live Alerts Section -->
+    <section class="alerts" id="alerts">
+        <div class="section-title">
+            <h2>Live Global Alerts</h2>
+            <p>Real-time disaster notifications from our global monitoring network</p>
+        </div>
+        <div class="alert-cards">
+            <div class="alert-card">
+                <h3>Earthquake Alert</h3>
+                <p>Magnitude 6.7 earthquake detected 50km off coast of Japan. Tsunami warning issued for coastal areas.</p>
+                <div class="alert-meta">
+                    <span><i class="fas fa-clock"></i> 15 min ago</span>
+                    <span><i class="fas fa-map-marker-alt"></i> Pacific Ocean</span>
+                </div>
+            </div>
+            <div class="alert-card warning">
+                <h3>Tropical Storm Warning</h3>
+                <p>Tropical storm Maria intensifying, expected to make landfall in Florida within 48 hours.</p>
+                <div class="alert-meta">
+                    <span><i class="fas fa-clock"></i> 1 hour ago</span>
+                    <span><i class="fas fa-map-marker-alt"></i> Atlantic Ocean</span>
+                </div>
+            </div>
+            <div class="alert-card info">
+                <h3>Wildfire Update</h3>
+                <p>California wildfire now 30% contained. Evacuation orders lifted for northern zones.</p>
+                <div class="alert-meta">
+                    <span><i class="fas fa-clock"></i> 3 hours ago</span>
+                    <span><i class="fas fa-map-marker-alt"></i> California, USA</span>
+                </div>
+            </div>
+            <div class="alert-card">
+                <h3>Flood Watch</h3>
+                <p>Heavy rainfall expected to cause flooding in low-lying areas of Bangladesh.</p>
+                <div class="alert-meta">
+                    <span><i class="fas fa-clock"></i> 5 hours ago</span>
+                    <span><i class="fas fa-map-marker-alt"></i> Dhaka, Bangladesh</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Map Section -->
+    <section class="map-section" id="map">
+        <div class="map-container"></div>
+        <div class="map-overlay">
+            <h2>Global Disaster Monitoring</h2>
+            <p>Our real-time global map tracks active disasters, relief efforts, and vulnerable populations with data updated every 30 seconds.</p>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+        <div class="section-title">
+            <h2>Trusted by Organizations Worldwide</h2>
+            <p>Hear from those who've experienced Guardian Shield in action</p>
+        </div>
+        <div class="testimonial-slider">
+            <div class="testimonial active">
+                <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Sarah Johnson">
+                <p>"Guardian Shield's early warning system gave us 54 hours notice before the cyclone hit, allowing us to evacuate 12,000 people safely. This technology is revolutionary."</p>
+                <div class="testimonial-author">Sarah Johnson</div>
+                <div class="testimonial-position">Director, International Red Cross</div>
+            </div>
+            <div class="testimonial">
+                <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Dr. Raj Patel">
+                <p>"The AI prediction models are consistently 20-30% more accurate than traditional methods. This has transformed our disaster preparedness strategy."</p>
+                <div class="testimonial-author">Dr. Raj Patel</div>
+                <div class="testimonial-position">Chief Scientist, UN Disaster Risk Reduction</div>
+            </div>
+            <div class="testimonial">
+                <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Maria Gonzalez">
+                <p>"During the Mexico City earthquake, Guardian Shield's autonomous drones located 17 survivors in collapsed buildings that ground teams had missed."</p>
+                <div class="testimonial-author">Maria Gonzalez</div>
+                <div class="testimonial-position">Emergency Response Coordinator, Mexico</div>
+            </div>
+            <div class="slider-controls">
+                <div class="slider-dot active" data-slide="0"></div>
+                <div class="slider-dot" data-slide="1"></div>
+                <div class="slider-dot" data-slide="2"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <h2>Ready to Transform Your Disaster Response?</h2>
+        <p>Join governments, NGOs, and corporations in building resilience against natural disasters with our proven platform.</p>
+        <button class="cta-button">Schedule Consultation</button>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3>Guardian Shield</h3>
+                <p>Advanced disaster management technology saving lives through prediction, prevention, and rapid response.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h3>Solutions</h3>
+                <ul>
+                    <li><a href="#">Government</a></li>
+                    <li><a href="#">Enterprise</a></li>
+                    <li><a href="#">Humanitarian</a></li>
+                    <li><a href="#">Insurance</a></li>
+                    <li><a href="#">Urban Planning</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Resources</h3>
+                <ul>
+                    <li><a href="#">Case Studies</a></li>
+                    <li><a href="#">White Papers</a></li>
+                    <li><a href="#">API Documentation</a></li>
+                    <li><a href="#">Disaster Preparedness Guides</a></li>
+                    <li><a href="#">Research Partners</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Company</h3>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Leadership</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Press</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 Guardian Shield Technologies. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+        </div>
+    </footer>
+
+    <!-- Language Selector -->
+    <div class="language-selector">
+        <div class="language-button" id="languageButton">
+            <i class="fas fa-language"></i>
+        </div>
+        <div class="language-dropdown" id="languageDropdown">
+            <a href="#" onclick="changeLanguage('en')">English</a>
+            <a href="#" onclick="changeLanguage('es')">Español</a>
+            <a href="#" onclick="changeLanguage('fr')">Français</a>
+            <a href="#" onclick="changeLanguage('de')">Deutsch</a>
+            <a href="#" onclick="changeLanguage('zh')">中文</a>
+            <a href="#" onclick="changeLanguage('ja')">日本語</a>
+            <a href="#" onclick="changeLanguage('ar')">العربية</a>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
